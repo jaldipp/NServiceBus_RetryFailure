@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HeadQuarters" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="HQStoreMessageProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="multistoredeployer" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHhsTsL42PqdSegKIHkmNn0wDQYJKoZIhvcNAQEBBQAEggEAmXERUIzApeHVI2N5EJUxsdIObtMIwcWEsy1itDCdKJgMq8Upb6TmtsJ4Ax+lEoJxzhQNU9Cn/usWyHuk5pqkmaUOpbwNlju4hVV3cI3fKLinDInYCs3eRTzzxGcolBu+tuQ7sdvFB4qe7o2ZJ0PdlKdqkCfqh3ZN/j4wI7Cp3DXoqpRPDo0aXU4qluKBTo3adHjF6tU4+rD37SBOMiDHYiuYIEPVxApr6dI8vZCJKEG1z3RT6EVIAVW6k9YABcjjL0FSvoLwa5BvYNNzApk+43zun9UenRiS/Fdqn8HgmMhlLK/C5QFJnhTfklXp5BeuEkjMuk361zhuyVXIfHaHOjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECA6VIImX4trtgBDYvWOwP0783hqOoA8sK+r7" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-26T23:59:59.0000000-06:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="AzureQueueConfig.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="AzureQueueConfig.QueueName" value="50000" />
+      <Setting name="Logging.Threshold" value="DEBUG" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="3C4777E0686C224FAA50CBEB01AB261E764FD5EB" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
